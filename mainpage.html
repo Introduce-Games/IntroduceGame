@@ -37,10 +37,9 @@
       	newImgs[20] = "<a href= 'nav_multiplay.html'><img src= 'images/overcooked.jpg' width='325' height='150'></a>";
 
         function changePic() {
-            var random = Math.floor(Math.random() * 13);
-            var object = document.getElementById("change");
-            object.src = imgArr[random];
-        }
+        var random = Math.floor(Math.random() * newImgs.length);
+        document.getElementById("change").innerHTML = newImgs[random];
+      }
     </script>
 </head>
 <body>
