@@ -23,6 +23,12 @@
       </ul>
     </nav>
     <section>
+      <script>
+        function setDisplay(partID){
+            document.getElementById(partID).style.display = "block";
+            document.getElementById("plus").style.display = "none";
+        }
+      </script>
       <article id="dontStarve">
         <p class="title"><strong>Don't starve</strong></p>
         <img src="images/Dont Starve.jpg" />
@@ -46,7 +52,10 @@
           </p>
         </div>
       </article>
-      <article id="sixtySeconds">
+	  <p style="text-align: center;">
+        <button id = "plus" onclick = "setDisplay('sixtySeconds')" style="position: center;"> 게임 더보기 </button>
+      </p>
+      <article id="sixtySeconds" style="display: none;">
         <p class="title"><strong>60 Seconds!</strong></p>
         <img src="images/60seconds.jpg" />
         <img src="images/60seconds2.jpg" width="600" height="350" />
