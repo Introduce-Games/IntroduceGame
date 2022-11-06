@@ -23,6 +23,12 @@
       </ul>
     </nav>
     <section>
+      <script>
+        function setDisplay(partID){
+            document.getElementById(partID).style.display = "block";
+            document.getElementById("plus").style.display = "none";
+        }
+      </script>
       <article id="theLastDoor">
         <p class="title"><strong>The Last Door</strong></p>
         <img src="images/The-Last-Door-Header.jpg" />
@@ -46,7 +52,10 @@
         </div>
         <img src="images/inside2.jpg" width="600" height="350" />
       </article>
-      <article id="houseOfRules">
+      <p style="text-align: center;">
+        <button id = "plus" onclick = "setDisplay('houseOfRules')" style="position: center;"> 게임 더보기 </button>
+      </p>
+      <article id="houseOfRules" style="display: none;">
         <p class="title"><strong>House of Rules</strong></p>
         <img src="images/house of rules.jpg" />
         <div class="explanation">
