@@ -23,6 +23,12 @@
       </ul>
     </nav>
     <section>
+		<script>
+        function setDisplay(partID){
+            document.getElementById(partID).style.display = "block";
+            document.getElementById("plus").style.display = "none";
+        }
+      	</script>
       <article id="humanFallFlat">
         <p class="title"><strong>Human: Fall Flat</strong></p>
         <img src="images/human fall flat.jpg" />
@@ -45,7 +51,10 @@
           <img src="images/deceit2.jpg" width="600" height="350" />
         </div>
       </article>
-      <article id="overcooked">
+	  <p style="text-align: center;">
+        <button id = "plus" onclick = "setDisplay('overcooked')" style="position: center;"> 게임 더보기 </button>
+      </p>
+      <article id="overcooked" style="display: none;">
         <p class="title"><strong>Overcooked!2</strong></p>
         <img src="images/overcooked.jpg" />
         <div class="explanation">
