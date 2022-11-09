@@ -23,6 +23,12 @@
       </ul>
     </nav>
     <section>
+		<script>
+        function setDisplay(partID){
+            document.getElementById(partID).style.display = "block";
+            document.getElementById("plus").style.display = "none";
+        }
+      	</script>
       <article id="minecraft">
         <p class="title"><strong>Minecraft</strong></p>
         <img src="images/Minecraft.png" />
@@ -46,8 +52,10 @@
         </div>
         <img src="images/starbound2.jpg" width="600" height="350" />
       </article>
-
-      <article id="terraria">
+	  <p style="text-align: center;">
+        <button id = "plus" onclick = "setDisplay('terraria')" style="position: center;"> 게임 더보기 </button>
+      </p>
+      <article id="terraria" style="display: none;">
         <p class="title"><strong>Terraria</strong></p>
         <img src="images/terraria.jpg" />
         <div class="explanation">

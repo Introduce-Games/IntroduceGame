@@ -23,6 +23,12 @@
       </ul>
     </nav>
     <section>
+      <script>
+        function setDisplay(partID){
+            document.getElementById(partID).style.display = "block";
+            document.getElementById("plus").style.display = "none";
+        }
+      </script>
       <article id="babaIsYou">
         <p class="title"><strong>Baba Is You</strong></p>
         <img src="images/baba is you.jpg" />
@@ -47,7 +53,10 @@
           </p>
         </div>
       </article>
-      <article id="portal">
+      <p style="text-align: center;">
+        <button id = "plus" onclick = "setDisplay('portal')" style="position: center;"> 게임 더보기 </button>
+      </p>
+      <article id="portal" style="display: none;">
         <p class="title"><strong>Portal</strong></p>
         <img src="images/portal.jpg" />
         <img src="images/portal2.jpg" width="600" height="350" />

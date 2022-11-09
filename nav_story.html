@@ -23,6 +23,12 @@
       </ul>
     </nav>
     <section>
+      <script>
+        function setDisplay(partID){
+            document.getElementById(partID).style.display = "block";
+            document.getElementById("plus").style.display = "none";
+        }
+      </script>
       <article id="oneshot">
         <p class="title"><strong>Oneshot</strong></p>
         <img src="images/OneShot1.png" />
@@ -47,7 +53,10 @@
         </div>
         <img src="images/night in the woods2.jpg" width="600" height="350" />
       </article>
-      <article id="thePainscreekKillings">
+      <p style="text-align: center;">
+        <button id = "plus" onclick = "setDisplay('thePainscreekKillings')" style="position: center;"> 게임 더보기 </button>
+      </p>
+      <article id="thePainscreekKillings" style="display: none;">
         <p class="title"><strong>The Painscreek Killings</strong></p>
         <img src="images/the painscreek killings.jpg" />
         <div class="explanation">

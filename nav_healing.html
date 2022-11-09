@@ -23,6 +23,12 @@
       </ul>
     </nav>
     <section>
+		<script>
+        function setDisplay(partID){
+            document.getElementById(partID).style.display = "block";
+            document.getElementById("plus").style.display = "none";
+        }
+      </script>
       <article id="aShortHike">
         <p class="title"><strong>A Short Hike</strong></p>
         <img src="images/a short hike2.png" />
@@ -48,7 +54,10 @@
           </p>
         </div>
       </article>
-      <article id="assembleWithCare">
+	  <p style="text-align: center;">
+        <button id = "plus" onclick = "setDisplay('assembleWithCare')" style="position: center;"> 게임 더보기 </button>
+      </p>
+      <article id="assembleWithCare" style="display: none;">
         <p class="title"><strong>Assemble with Care</strong></p>
         <img src="images/assemble with Care.jpg" />
         <img src="images/assemble with Care2.jpg" width="600" height="350" />
