@@ -6,4 +6,6 @@ RUN apt-get -qq install nodejs --yes
 RUN npm install
 COPY . /app/
 WORKDIR /app/
+ENV PORT 5000
+EXPOSE 5000
 CMD ["node", "app.js"]
