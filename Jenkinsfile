@@ -10,7 +10,7 @@ pipeline {
     stage('Clone repository') {
       steps {
         git branch: 'develop',
-        url: 'https://github.com/GiYeons/IntroduceGame.git'
+        url: 'https://github.com/GiYeons/IntroduceGame-fork.git'
       }
     }
     stage('Build image') {
@@ -36,9 +36,7 @@ pipeline {
       }
       steps{
    sh "sed -i 's/introduce-game:latest/introduce-game:${env.BUILD_ID}/g' deployment.yaml"
-        step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME,
-location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID,
-verifyDeployments: true])
+        step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
      }
    }
  }
